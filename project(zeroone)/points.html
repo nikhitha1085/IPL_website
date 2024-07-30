@@ -1,0 +1,43 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>IPL Points Table</title>
+      <link rel="stylesheet" href="main.css">
+     
+  </head>
+  <body>
+      <div class="container">
+          <h1>IPL Points Table</h1>
+          <label for="year-select">Select Year:</label>
+          <select id="year-select" onchange="fetchPointsTable()">
+              <script>
+                  const select = document.getElementById('year-select');
+                  for (let year = 2014; year <= 2024; year++) {
+                      const option = document.createElement('option');
+                      option.value = year;
+                      option.textContent = year;
+                      select.appendChild(option);
+                  }
+              </script>
+          </select>
+          <table id="points-table">
+              <thead>
+                  <tr>
+                      <th>Position</th>
+                      <th>Team</th>
+                      <th>Matches Played</th>
+                      <th>Wins</th>
+                      <th>Losses</th>
+                      <th>Points</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <!-- Points table data will be populated here -->
+              </tbody>
+          </table>
+      </div>
+      <script src="script.js"></script>
+  </body>
+  </html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Dashboard</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://pngbong.com/wp-content/uploads/2023/04/IPL-PNG-Logo.png" alt="IPL Logo">
+        </div>
+
+        <!-- this is for background logo -->
+        <div class="background">
+            <img src="images/csblogo.png" id="logobg" alt="CSK Logo">
+        </div>
+
+        <div class="heading">
+            <h1 id="head">Royal Challengers Bangalore</h1>
+            <p style="font-weight: 500;">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. In nam nesciunt cum error officia, perferendis laborum. Sunt aperiam sit, tempore voluptatem assumenda quam nam architecto consectetur veniam natus veritatis corrupti quod minima quo. Atque porro corrupti praesentium culpa tempore? Ipsam.
+            </p>
+            <button><a href="https://www.youtube.com/watch?v=XV6yqupCq0g" style="text-decoration: none;">WATCH NOW</a></button>
+        </div>
+
+        <!-- this is for main image -->
+        <div class="image">
+            <img id="myimage" src="https://y20india.in/wp-content/uploads/2024/04/rcb-squad-ipl-2024-sportstiger-1702966270231-original.jpg" alt="RCB Squad">
+        </div>
+
+        <!-- now navbar -->
+        <div class="navbar">
+            <ul>
+                <li><a href="main.html" style="text-decoration: none;">Home</a></li>
+                <li><a href="index.html"style="text-decoration: none;">Team</a></li>
+            </ul>
+        </div>
+
+        <!-- html code is done -->
+
+        <!-- one class is missing -->
+        <div class="empty"></div>
+
+        <!-- this is for remaining teams -->
+        <div class="list">
+            <ol>
+                <li onclick="myFun('https://media.sportstiger.com/media/image-2023-12-17t15-21-34-597z-1702844896520-original.png', 'gold', 'Chennai Super Kings', 'https://upload.wikimedia.org/wikipedia/en/thumb/2/2b/Chennai_Super_Kings_Logo.svg/800px-Chennai_Super_Kings_Logo.svg.png')">CSK</li>
+                <li onclick="myFun('https://y20india.in/wp-content/uploads/2024/04/rcb-squad-ipl-2024-sportstiger-1702966270231-original.jpg', 'red', 'Royal Challengers Bangalore', 'https://wallpapercave.com/wp/wp7104719.png')">RCB</li>
+                <li onclick="myFun('https://y20india.in/wp-content/uploads/2024/04/dc-squad-ipl-2024-sportstiger-1702966832153-original.jpg', 'blue', 'Delhi Capitals', 'https://upload.wikimedia.org/wikipedia/en/thumb/2/2f/Delhi_Capitals.svg/1200px-Delhi_Capitals.svg.png')">DC</li>
+                <li onclick="myFun('https://y20india.in/wp-content/uploads/2024/04/mi-squad-ipl-2024-sportstiger-1702967642348-original.jpg', '#0818A8', 'Mumbai Indians', 'https://upload.wikimedia.org/wikipedia/en/thumb/c/cd/Mumbai_Indians_Logo.svg/1200px-Mumbai_Indians_Logo.svg.png')">MI</li>
+                <li onclick="myFun('https://y20india.in/wp-content/uploads/2024/04/sunriser-hyderabad.jpeg', 'orangered', 'Sunrises Hyderabad', 'https://insider.in/assets/images/IPL/TeamLogos/srh.svg')">SRH</li>
+                <li onclick="myFun('https://y20india.in/wp-content/uploads/2024/04/pbks-squad-ipl-2024-sportstiger-1702966974810-original.jpg', 'red', 'Punjab Kings', 'https://upload.wikimedia.org/wikipedia/en/thumb/d/d4/Punjab_Kings_Logo.svg/1200px-Punjab_Kings_Logo.svg.png')">PBKS</li>
+                <li onclick="myFun('https://y20india.in/wp-content/uploads/2024/04/rr-squad-ipl-2024-sportstiger-1702965836944-original.jpg', '#ff3385', 'Rajasthan Royals', 'https://1000logos.net/wp-content/uploads/2024/03/Rajasthan-Royals-Logo.png')">RR</li>
+                <li onclick="myFun('https://media.sportstiger.com/media/kkr-squad-ipl-2024-sportstiger-1702967454248-original.jpg', '#4B0082', 'Kolkata Knight Riders', 'https://1000logos.net/wp-content/uploads/2024/03/Kolkata-Knight-Riders-Logo.png')">KKR</li>
+                <li onclick="myFun('https://y20india.in/wp-content/uploads/2024/04/gt-1702843909497-original.jpg', '#000080', 'Gujarat Titans', 'https://www.yolo247.com/sports/tournaments/wp-content/uploads/2023/12/GToutline.png')">GT</li>
+                <li onclick="myFun('https://y20india.in/wp-content/uploads/2024/04/LSG-Players-Salary-details-IPL-2024.webp', '#1E90FF', 'Lucknow Super Giants', 'https://upload.wikimedia.org/wikipedia/en/thumb/a/a9/Lucknow_Super_Giants_IPL_Logo.svg/290px-Lucknow_Super_Giants_IPL_Logo.svg.png')">LSG</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function myFun(image, colour, head, logo) {
+            document.getElementById('myimage').src = image;
+            document.querySelector('.empty').style.backgroundColor = colour;
+            document.querySelector('button').style.backgroundColor = colour;
+            document.getElementById('head').innerHTML = head;
+            document.getElementById('logobg').src = logo;
+        }
+    </script>
+</body>
+</html>
